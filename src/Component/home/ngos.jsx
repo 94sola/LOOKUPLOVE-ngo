@@ -11,49 +11,49 @@ export default function About() {
         
         {/* LEFT CONTENT */}
         <div>
-          <div className="w-16 h-[3px] bg-[#6a1b1b] mb-6 rounded-full" />
+          <div className="w-14 h-[3px] bg-[#6a1b1b] mb-6 rounded-full" />
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
             About <span className="text-[#6a1b1b]">Look Up Love</span>
           </h2>
 
           {/* Golden Divider */}
-          <div className="w-24 h-[3px] bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 rounded-full mb-8"></div>
+          <div className="w-20 sm:w-24 h-[3px] bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 rounded-full mb-8"></div>
 
-          <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
             Look Up Love is a relationship and emotional wellness initiative dedicated to restoring hope, strengthening families, and nurturing meaningful human connections.
           </p>
 
-          <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
             Our work focuses on providing structured counselling programs that address real-life relationship challenges.
           </p>
 
-          <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
             Through compassion, professionalism, and a deep commitment to impact, we create safe, trusted spaces where people can heal, grow, and thrive.
           </p>
 
-          <button className="mt-8 px-7 py-3 rounded-md font-semibold bg-[#6a1b1b] text-white hover:bg-[#571515] transition">
+          <button className="mt-8 px-6 py-3 sm:px-7 sm:py-3 rounded-md font-semibold bg-[#6a1b1b] text-white hover:bg-[#571515] transition">
             Learn More
           </button>
         </div>
 
         {/* RIGHT CARD */}
         <div className="flex justify-center lg:justify-end">
-          <div className="bg-white border border-gray-200 rounded-3xl shadow-xl p-10 max-w-md">
-            <h3 className="text-xl font-semibold mb-3 text-[#6a1b1b]">
+          <div className="bg-white border border-gray-200 rounded-3xl shadow-xl p-6 sm:p-8 md:p-10 max-w-md w-full">
+            <h3 className="text-lg sm:text-xl font-semibold mb-3 text-[#6a1b1b]">
               Our Vision
             </h3>
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
               To be a beacon of hope and transformation, inspiring love that
               transcends challenges and builds stronger families and communities
               across the world.
             </p>
 
             <div className="border-t pt-6">
-              <h3 className="text-xl font-semibold mb-4 text-[#6a1b1b]">
+              <h3 className="text-lg sm:text-xl font-semibold mb-4 text-[#6a1b1b]">
                 Core Values
               </h3>
-              <ul className="space-y-3 text-gray-600">
+              <ul className="space-y-3 text-gray-600 text-sm sm:text-base">
                 <li>Compassion & Empathy</li>
                 <li>Commitment to Growth</li>
                 <li>Community Impact</li>

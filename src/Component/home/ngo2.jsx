@@ -42,67 +42,63 @@ export default function Programs() {
   ];
 
   return (
-    <section className="relative py-28 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+    <section className="relative py-20 sm:py-24 lg:py-28 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute inset-0 -z-10">
         {/* Soft gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-tr from-[#6a1b1b]/5 via-transparent to-[#6a1b1b]/10 animate-pulse"></div>
 
         {/* Abstract blurred circles */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#6a1b1b]/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#6a1b1b]/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-16 sm:top-20 left-4 sm:left-10 w-56 sm:w-72 h-56 sm:h-72 bg-[#6a1b1b]/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-16 sm:bottom-20 right-4 sm:right-10 w-72 sm:w-96 h-72 sm:h-96 bg-[#6a1b1b]/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* SECTION HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto"
+          className="text-center max-w-3xl mx-auto px-4 sm:px-0"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
             Our Counseling & Support Programs
           </h2>
-          <p className="mt-6 text-gray-600 text-lg leading-relaxed">
+          <p className="mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">
             Look Up Love provides structured counseling and community programs designed
             to strengthen relationships, promote healing, and uplift individuals and families
             toward healthy emotional connections.
           </p>
         </motion.div>
 
-        {/* PROGRAM CARDS */}
-        <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 relative z-10">
+        {/* PROGRAM CARDS */
+        <div className="mt-16 sm:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 relative z-10">
           {programs.map((program, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.15 }}
-              className="group bg-white p-10 rounded-2xl shadow-md hover:shadow-2xl 
-                         transition-all duration-300 border border-gray-100 hover:border-[#6a1b1b]/40"
+              className="group bg-white p-6 sm:p-8 lg:p-10 rounded-[1.75rem] shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-[#6a1b1b]/40"
             >
               {/* ICON */}
-              <div className="w-14 h-14 flex items-center justify-center rounded-xl 
-                              bg-[#6a1b1b] text-white mb-6 group-hover:scale-110 
-                              transition-transform duration-300 shadow-lg">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center rounded-xl bg-[#6a1b1b] text-white mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                 {program.icon}
               </div>
 
               {/* TITLE */}
-              <h3 className="text-xl font-semibold text-gray-900 group-hover:text-[#6a1b1b] transition-colors">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 group-hover:text-[#6a1b1b] transition-colors">
                 {program.title}
               </h3>
 
               {/* DESCRIPTION */}
-              <p className="mt-4 text-gray-600 text-sm leading-relaxed">
+              <p className="mt-4 text-gray-600 text-sm sm:text-base leading-relaxed">
                 {program.description}
               </p>
 
               {/* Decorative line */}
-              <div className="mt-6 w-12 h-[3px] bg-[#6a1b1b] rounded-full opacity-0 
-                              group-hover:opacity-100 transition-all duration-300"></div>
+              <div className="mt-6 w-12 h-[3px] bg-[#6a1b1b] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
             </motion.div>
           ))}
         </div>

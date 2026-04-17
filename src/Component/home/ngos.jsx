@@ -1,13 +1,13 @@
 export default function About() {
   return (
-    <section className="relative py-32 bg-white text-gray-900">
+    <section className="relative py-20 sm:py-24 lg:py-32 bg-white text-gray-900">
       {/* BACKGROUND DECORATION */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-[-120px] left-[-120px] w-[420px] h-[420px] bg-[#6a1b1b]/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[-120px] right-[-120px] w-[500px] h-[500px] bg-[#6a1b1b]/10 rounded-full blur-[140px]" />
+        <div className="absolute top-[-80px] left-[-80px] sm:top-[-120px] sm:left-[-120px] w-[300px] sm:w-[420px] h-[300px] sm:h-[420px] bg-[#6a1b1b]/10 rounded-full blur-[100px] sm:blur-[120px]" />
+        <div className="absolute bottom-[-80px] right-[-80px] sm:bottom-[-120px] sm:right-[-120px] w-[340px] sm:w-[500px] h-[340px] sm:h-[500px] bg-[#6a1b1b]/10 rounded-full blur-[110px] sm:blur-[140px]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-12 lg:grid-cols-2 lg:gap-20 items-center">
         
         {/* LEFT CONTENT */}
         <div>

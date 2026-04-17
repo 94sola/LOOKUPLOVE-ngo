@@ -43,7 +43,7 @@ export default function AboutHero() {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-[92vh] flex items-center overflow-hidden"
+      className="relative min-h-[92vh] sm:min-h-screen flex items-center overflow-hidden"
     >
 
       {/* BACKGROUND */}
@@ -67,31 +67,31 @@ export default function AboutHero() {
       </div>
 
       {/* FLOATING BADGE */}
-      <div className="absolute top-32 left-1/2 -translate-x-1/2 z-20 reveal">
-        <div className="px-6 py-3 rounded-full backdrop-blur-md bg-white/10 border border-white/30 text-white text-sm tracking-wide shadow-lg">
+      <div className="absolute top-20 sm:top-28 left-1/2 -translate-x-1/2 z-20 reveal px-4 sm:px-0">
+        <div className="px-4 sm:px-6 py-2.5 sm:py-3 rounded-full backdrop-blur-md bg-white/10 border border-white/30 text-white text-xs sm:text-sm tracking-wide shadow-lg whitespace-nowrap">
           Guiding Healing & Healthy Relationships
         </div>
       </div>
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* LEFT */}
           <div>
 
-            <span className="reveal text-[11px] tracking-[0.45em] uppercase text-white/80">
+            <span className="reveal text-[10px] sm:text-[11px] tracking-[0.45em] uppercase text-white/80">
               About Look Up Love
             </span>
 
-            <h1 className="reveal mt-6 max-w-2xl text-[44px] sm:text-[56px] lg:text-[72px] font-semibold text-white leading-[1.1] tracking-tight">
+            <h1 className="reveal mt-6 max-w-2xl text-3xl sm:text-[44px] md:text-[56px] lg:text-[72px] font-semibold text-white leading-[1.1] tracking-tight">
               Restoring Confidence in Love,
-              <span className="block font-light text-white/80 mt-3">
+              <span className="block font-light text-white/80 mt-3 text-base sm:text-lg">
                 One Life at a Time
               </span>
             </h1>
 
-            <p className="reveal mt-8 text-lg text-white/80 leading-relaxed max-w-xl">
+            <p className="reveal mt-8 text-base sm:text-lg text-white/80 leading-relaxed max-w-xl">
               We guide individuals, couples, and families through emotional
               challenges with clarity, structure, and compassion—helping them
               rebuild trust, rediscover purpose, and create lasting transformation.
@@ -99,14 +99,13 @@ export default function AboutHero() {
 
             {/* SIGNATURE */}
             <div className="reveal mt-12">
-              <p className="text-white/80 italic text-[15px]">
+              <p className="text-white/80 italic text-sm sm:text-[15px]">
                 “Healing begins when people feel seen, heard, and guided with intention.”
               </p>
 
               <div className="mt-4 flex items-center gap-4">
-
                 <div>
-                  <p className="text-xs text-white/60">
+                  <p className="text-[10px] sm:text-xs text-white/60">
                     Relationship & Emotional Wellness Advocate
                   </p>
                 </div>
@@ -116,14 +115,14 @@ export default function AboutHero() {
           </div>
 
           {/* RIGHT - IMPACT */}
-          <div className="reveal relative backdrop-blur-md bg-white/90 rounded-3xl p-14 shadow-[0_40px_120px_rgba(0,0,0,0.45)] border border-white/40">
+          <div className="reveal relative backdrop-blur-md bg-white/90 rounded-3xl p-8 sm:p-10 lg:p-14 shadow-[0_40px_120px_rgba(0,0,0,0.45)] border border-white/40">
 
             {/* glow accent */}
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#6a1b1b]/20 blur-[80px] rounded-full"></div>
+            <div className="absolute -top-10 -right-10 w-32 h-32 sm:w-40 sm:h-40 bg-[#6a1b1b]/20 blur-[60px] sm:blur-[80px] rounded-full"></div>
 
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-white/50 via-transparent to-transparent pointer-events-none"></div>
 
-            <h3 className="text-lg font-semibold text-[#6a1b1b] mb-10">
+            <h3 className="text-base sm:text-lg font-semibold text-[#6a1b1b] mb-8 sm:mb-10">
               Our Impact
             </h3>
 
@@ -135,9 +134,9 @@ export default function AboutHero() {
                 ["Communities Reached", "10+"],
                 ["Years of Service", "8+"],
               ].map(([label, value], i) => (
-                <div key={i} className="flex justify-between py-5">
-                  <span className="text-sm text-gray-600">{label}</span>
-                  <span className="text-xl font-semibold text-[#6a1b1b]">
+                <div key={i} className="flex justify-between py-4 sm:py-5">
+                  <span className="text-xs sm:text-sm text-gray-600">{label}</span>
+                  <span className="text-lg sm:text-xl font-semibold text-[#6a1b1b]">
                     {value}
                   </span>
                 </div>
@@ -151,7 +150,7 @@ export default function AboutHero() {
       </div>
 
       {/* SCROLL INDICATOR */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20">
+      <div className="absolute bottom-8 sm:bottom-10 left-1/2 -translate-x-1/2 z-20">
         <div className="scroll-indicator"></div>
       </div>
 

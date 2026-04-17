@@ -238,16 +238,16 @@ export default function FAQSection() {
   }, [search, filter, lang]);
 
   return (
-    <section className="w-full bg-gray-50 py-20 px-4">
-      <div className="max-w-4xl mx-auto">
+    <section className="w-full bg-gray-50 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto">
 
         {/* HEADER */}
-        <div className="text-center mb-10">
-          <HelpCircle className="mx-auto mb-3 text-gray-700" size={30} />
-          <h2 className="text-4xl font-semibold text-gray-900">
+        <div className="text-center mb-10 px-2 sm:px-0">
+          <HelpCircle className="mx-auto mb-3 text-gray-700" size={32} />
+          <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900">
             Frequently Asked Questions
           </h2>
-          <p className="text-gray-500 mt-2 text-sm">
+          <p className="text-gray-500 mt-2 text-sm sm:text-base max-w-2xl mx-auto">
             Search, filter, and explore answers in your preferred language.
           </p>
         </div>
@@ -256,15 +256,15 @@ export default function FAQSection() {
         <div className="space-y-4 mb-8">
 
           {/* Language Toggle */}
-          <div className="flex justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-2">
             {["en", "fr", "yo"].map((l) => (
               <button
                 key={l}
                 onClick={() => setLang(l)}
-                className={`px-4 py-1.5 text-sm border rounded-full ${
+                className={`px-4 py-2 text-sm sm:text-base border rounded-full transition ${
                   lang === l
-                    ? "bg-black text-white"
-                    : "bg-white text-gray-700"
+                    ? "bg-black text-white border-black"
+                    : "bg-white text-gray-700 border-gray-300"
                 }`}
               >
                 {l === "en" ? "English" : l === "fr" ? "Français" : "Yorùbá"}
@@ -278,19 +278,19 @@ export default function FAQSection() {
             placeholder="Search FAQs..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full border rounded-lg px-4 py-3 text-sm focus:outline-none bg-white"
+            className="w-full border rounded-lg px-4 py-3 text-sm sm:text-base focus:outline-none bg-white"
           />
 
           {/* Filter */}
-          <div className="flex justify-center gap-2 flex-wrap">
+          <div className="flex flex-wrap justify-center gap-2">
             {["all", "donor", "volunteer", "partner"].map((f) => (
               <button
                 key={f}
                 onClick={() => setFilter(f)}
-                className={`px-3 py-1 text-xs border rounded-full ${
+                className={`px-3 py-2 text-xs sm:text-sm border rounded-full transition ${
                   filter === f
-                    ? "bg-gray-900 text-white"
-                    : "bg-white text-gray-600"
+                    ? "bg-gray-900 text-white border-gray-900"
+                    : "bg-white text-gray-600 border-gray-300"
                 }`}
               >
                 {f.toUpperCase()}
@@ -300,7 +300,7 @@ export default function FAQSection() {
         </div>
 
         {/* FAQ LIST */}
-        <div className="space-y-3">
+        <div className="space-y-4">
           {filteredFAQs.map((faq, index) => {
             const Icon = faq.icon;
             const isOpen = openIndex === index;
@@ -308,30 +308,30 @@ export default function FAQSection() {
             return (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md"
+                className="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between px-5 py-4 text-left"
+                  className="w-full flex flex-col sm:flex-row sm:items-center sm:justify-between px-4 sm:px-5 py-4 sm:py-5 text-left gap-3"
                 >
-                  <div className="flex items-center gap-3">
-                    <span className="p-2 bg-gray-100 rounded-lg">
+                  <div className="flex items-start sm:items-center gap-3">
+                    <span className="p-2 sm:p-3 bg-gray-100 rounded-lg">
                       <Icon size={18} className="text-gray-700" />
                     </span>
 
-                    <span className="font-medium text-gray-800">
+                    <span className="font-medium text-gray-800 text-sm sm:text-base">
                       {faq[lang].q}
                     </span>
                   </div>
 
-                  <span className="text-xl text-gray-500">
+                  <span className="text-2xl text-gray-500">
                     {isOpen ? "−" : "+"}
                   </span>
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 pb-5 pt-1">
-                    <p className="text-gray-600 border-t pt-4 leading-relaxed">
+                  <div className="px-4 sm:px-5 pb-5 pt-1">
+                    <p className="text-gray-600 border-t pt-4 text-sm sm:text-base leading-relaxed">
                       {faq[lang].a}
                     </p>
                   </div>

@@ -10,6 +10,7 @@ export default function WhoWeHelp() {
     support: ["Orphanage Home", "Divorced Individuals", "Widows & Widowers"],
   };
 
+  
   return (
     <section className="relative py-16 sm:py-20 lg:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-14 relative z-10 rounded-3xl ">

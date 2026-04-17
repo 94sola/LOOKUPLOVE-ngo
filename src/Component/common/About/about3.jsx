@@ -41,23 +41,23 @@ export default function MissionSection() {
   ];
 
   return (
-    <section ref={sectionRef} className="py-32 bg-white">
+    <section ref={sectionRef} className="py-20 sm:py-24 lg:py-32 bg-white">
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ================= MISSION & VISION ================= */}
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="text-center max-w-4xl mx-auto px-4 sm:px-0">
 
-          <h2 className="reveal text-4xl sm:text-5xl font-semibold text-[#6a1b1b]">
+          <h2 className="reveal text-3xl sm:text-4xl md:text-5xl font-semibold text-[#6a1b1b]">
             Our Purpose & Direction
           </h2>
 
           {/* Mission */}
-          <div className="reveal mt-12">
+          <div className="reveal mt-10 sm:mt-12">
             <h3 className="text-xs tracking-[0.4em] uppercase text-[#6a1b1b]/60">
               Mission
             </h3>
-            <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-gray-600 leading-relaxed">
               Look Up Love was founded with a clear mission — to restore emotional
               well-being and strengthen relationships through intentional guidance,
               counselling, and compassionate support.
@@ -65,11 +65,11 @@ export default function MissionSection() {
           </div>
 
           {/* Vision */}
-          <div className="reveal mt-12">
+          <div className="reveal mt-10 sm:mt-12">
             <h3 className="text-xs tracking-[0.4em] uppercase text-[#6a1b1b]/60">
               Vision
             </h3>
-            <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+            <p className="mt-4 text-base sm:text-lg text-gray-600 leading-relaxed">
               Through mentorship and community outreach programs, the foundation
               helps individuals and families rebuild trust, rediscover purpose,
               and cultivate meaningful relationships that endure.
@@ -79,19 +79,19 @@ export default function MissionSection() {
         </div>
 
         {/* ================= DIVIDER ================= */}
-        <div className="reveal my-20 flex justify-center">
-          <div className="w-2/3 h-[1px] bg-gradient-to-r from-transparent via-[#6a1b1b] to-transparent"></div>
+        <div className="reveal my-16 sm:my-20 flex justify-center">
+          <div className="w-full sm:w-2/3 h-[1px] bg-gradient-to-r from-transparent via-[#6a1b1b] to-transparent"></div>
         </div>
 
         {/* ================= AIM + GOALS ================= */}
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
 
           {/* Aim */}
           <div className="reveal">
-            <h3 className="text-2xl font-semibold text-gray-900">
+            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900">
               Our Aim
             </h3>
-            <p className="mt-6 text-lg text-gray-600 leading-relaxed">
+            <p className="mt-6 text-base sm:text-lg text-gray-600 leading-relaxed">
               To create safe environments where individuals rediscover purpose,
               rebuild trust, and develop emotional strength for healthy relationships.
             </p>
@@ -99,14 +99,14 @@ export default function MissionSection() {
 
           {/* Goals */}
           <div className="reveal">
-            <h3 className="text-2xl font-semibold text-gray-900">
+            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900">
               Our Goals
             </h3>
 
             <ul className="mt-6 space-y-4">
               {goals.map((goal, i) => (
-                <li key={i} className="flex items-start text-gray-600">
-                  <span className="w-2 h-2 mt-2 bg-[#6a1b1b] rounded-full mr-3"></span>
+                <li key={i} className="flex items-start text-base sm:text-lg text-gray-600">
+                  <span className="w-2 h-2 mt-2 sm:mt-1 bg-[#6a1b1b] rounded-full mr-3 flex-shrink-0"></span>
                   {goal}
                 </li>
               ))}
@@ -116,17 +116,16 @@ export default function MissionSection() {
         </div>
 
         {/* ================= VALUES ================= */}
-        <div className="reveal mt-24 text-center">
-          <h3 className="text-2xl font-semibold text-gray-900">
+        <div className="reveal mt-16 sm:mt-24 text-center">
+          <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900">
             Our Core Values
           </h3>
 
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
+          <div className="mt-8 sm:mt-10 flex flex-wrap justify-center gap-3 sm:gap-4">
             {values.map((value, i) => (
               <div
                 key={i}
-                className="px-6 py-3 border border-[#6a1b1b]/20 rounded-full text-sm text-gray-700
-                hover:bg-[#6a1b1b] hover:text-white transition duration-300"
+                className="px-4 sm:px-6 py-2.5 sm:py-3 border border-[#6a1b1b]/20 rounded-full text-sm sm:text-base text-gray-700 hover:bg-[#6a1b1b] hover:text-white transition duration-300"
               >
                 {value}
               </div>

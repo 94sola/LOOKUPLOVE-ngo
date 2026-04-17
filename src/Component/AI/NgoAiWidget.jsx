@@ -123,7 +123,7 @@ export default function NgoAIFloatingWidget() {
       {/* Button */}
       <button
         onClick={() => setOpen(!open)}
-        className="fixed bottom-28 right-10 bg-black text-white p-4 rounded-full z-50 shadow-lg"
+        className="fixed bottom-28 right-10 bg-[#6a1b1b] text-white p-4 rounded-full z-50 shadow-lg"
       >
         {open ? <X size={24} /> : <MessageCircle size={24} />}
       </button>

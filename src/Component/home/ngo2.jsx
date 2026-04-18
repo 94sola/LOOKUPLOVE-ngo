@@ -72,7 +72,7 @@ export default function Programs() {
           </p>
         </motion.div>
 
-        {/* PROGRAM CARDS */
+        {/* PROGRAM CARDS */}
         <div className="mt-16 sm:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 relative z-10">
           {programs.map((program, index) => (
             <motion.div

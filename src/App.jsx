@@ -12,7 +12,7 @@ import NgoAIFloatingWidget from "./Component/AI/NgoAiWidget";
 
 function App() {
   return (
-    <div className="max-w-full">
+    <div className="max-w-full min-h-screen overflow-x-hidden">
 
       <Router>
 

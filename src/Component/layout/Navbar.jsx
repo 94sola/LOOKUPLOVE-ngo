@@ -121,7 +121,7 @@ export default function Navbar() {
             <Link to="/" onClick={handleNavigate}><img src={logo} className="h-10 md:h-12"/></Link>
 
             {/* DESKTOP */}
-            <div className="hidden lg:flex items-center gap-10 relative" ref={navRef} onMouseLeave={handleMouseLeave}>
+            <div className="hidden md:flex items-center gap-6 md:gap-10 relative" ref={navRef} onMouseLeave={handleMouseLeave}>
               <NavLink to="/" onMouseEnter={handleMouseEnter}>Home</NavLink>
               <NavLink to="/about" onMouseEnter={handleMouseEnter}>About</NavLink>
 
@@ -130,22 +130,22 @@ export default function Navbar() {
                 <div className="flex items-center gap-1 cursor-pointer">Programs <FiChevronDown /></div>
                 <AnimatePresence>
                   {mainOpen && (
-                    <motion.div initial={{opacity:0,y:10}} animate={{opacity:1,y:0}} exit={{opacity:0,y:10}} className="absolute top-full left-0 mt-3 w-64 bg-white shadow-xl rounded-md border">
+                    <motion.div initial={{opacity:0,y:10}} animate={{opacity:1,y:0}} exit={{opacity:0,y:10}} className="absolute top-full left-0 mt-3 w-56 md:w-64 bg-white shadow-xl rounded-md border">
                       <div onMouseEnter={()=>setLevelOne("counselling")} className="px-4 py-3 flex justify-between hover:bg-gray-100 cursor-pointer">Counselling <FiChevronDown size={14}/></div>
                       <div onMouseEnter={()=>setLevelOne("support")} className="px-4 py-3 flex justify-between hover:bg-gray-100 cursor-pointer">Support <FiChevronDown size={14}/></div>
 
                       {levelOne==="counselling" && (
-                        <div className="absolute left-full top-0 w-64 bg-white shadow-xl border rounded-md">
+                        <div className="absolute left-full top-0 w-56 md:w-64 bg-white shadow-xl border rounded-md">
                           {programs.counselling.map((item,i)=>(<div key={item.name} onMouseEnter={()=>setLevelTwo(i)} className="relative px-4 py-3 flex justify-between hover:bg-gray-100 cursor-pointer">{item.name} <FiChevronDown size={14}/>
                               {levelTwo===i && (
-                                <div className="absolute left-full top-0 w-64 bg-white shadow-xl border rounded-md">{item.items.map(sub=>(<Link key={sub} to={`/programs/${sub.toLowerCase().replace(/ /g,"-")}`} onClick={handleNavigate} className="block px-4 py-3 hover:bg-gray-100">{sub}</Link>))}</div>
+                                <div className="absolute left-full top-0 w-56 md:w-64 bg-white shadow-xl border rounded-md">{item.items.map(sub=>(<Link key={sub} to={`/programs/${sub.toLowerCase().replace(/ /g,"-")}`} onClick={handleNavigate} className="block px-4 py-3 hover:bg-gray-100">{sub}</Link>))}</div>
                               )}
                           </div>))}
                         </div>
                       )}
 
                       {levelOne==="support" && (
-                        <div className="absolute left-full top-0 w-64 bg-white shadow-xl border rounded-md">{programs.support.map(item=>(<Link key={item} to={`/programs/${item.toLowerCase().replace(/ /g,"-")}`} onClick={handleNavigate} className="block px-4 py-3 hover:bg-gray-100">{item}</Link>))}</div>
+                        <div className="absolute left-full top-0 w-56 md:w-64 bg-white shadow-xl border rounded-md">{programs.support.map(item=>(<Link key={item} to={`/programs/${item.toLowerCase().replace(/ /g,"-")}`} onClick={handleNavigate} className="block px-4 py-3 hover:bg-gray-100">{item}</Link>))}</div>
                       )}
                     </motion.div>
                   )}
@@ -159,7 +159,7 @@ export default function Navbar() {
             </div>
 
             {/* RIGHT SIDE */}
-            <div className="hidden lg:flex items-center gap-5">
+            <div className="hidden md:flex items-center gap-5">
               <div className="flex gap-4 text-gray-600">
                 <FaInstagram className="hover:text-[#6a1b1b]"/>
                 <FaFacebookF className="hover:text-[#6a1b1b]"/>
@@ -169,7 +169,7 @@ export default function Navbar() {
               <Link to="/donate" className="bg-[#6a1b1b] text-white px-5 py-2 rounded-md">Donate</Link>
             </div>
 
-            <button onClick={()=>setOpen(true)} className="lg:hidden"><HiOutlineMenuAlt3 size={26}/></button>
+            <button onClick={()=>setOpen(true)} className="md:hidden"><HiOutlineMenuAlt3 size={26}/></button>
           </div>
         </nav>
       </header>

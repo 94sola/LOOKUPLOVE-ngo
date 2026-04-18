@@ -130,9 +130,9 @@ export default function AboutHero() {
             <div className="divide-y divide-gray-200/70 text-gray-700">
 
               {[
-                ["Couples Guided", "2,000+"],
-                ["Individuals Supported", "500+"],
-                ["Communities Reached", "10+"],
+                ["Couples Guided", "1500+"],
+                ["Individuals Supported", "60+"],
+                ["Communities Reached", "5+"],
                 ["Years of Service", "8+"],
               ].map(([label, value], i) => (
                 <div key={i} className="flex justify-between py-5">

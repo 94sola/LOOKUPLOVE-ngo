@@ -35,7 +35,7 @@ export default function Hero() {
   const y = useTransform(scrollYProgress, [0, 1], [0, 80]);
 
   return (
-    <section ref={ref} className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section ref={ref} className="relative w-full min-h-screen sm:min-h-screen md:min-h-[90vh] flex items-center overflow-hidden">
 
       {/* BACKGROUND */}
       <motion.div style={{ scale, y }} className="absolute inset-0">
@@ -65,9 +65,9 @@ export default function Hero() {
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1 }}
-        className="absolute right-4 md:right-8 top-28 bg-[#6a1b1b] text-white px-5 py-2 rounded-lg shadow-xl flex items-center gap-2 z-20"
+        className="absolute right-3 sm:right-4 md:right-8 top-20 sm:top-24 md:top-28 bg-[#6a1b1b] text-white px-3 sm:px-4 md:px-5 py-2 sm:py-2 md:py-2 rounded-lg shadow-xl flex items-center gap-2 z-20 flex-wrap sm:flex-nowrap"
       >
-        <FaHeart />
+        <FaHeart className="text-xs sm:text-sm md:text-base flex-shrink-0" />
 
         <AnimatePresence mode="wait">
           <motion.span
@@ -76,7 +76,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.4 }}
-            className="text-sm md:text-base"
+            className="text-xs sm:text-sm md:text-base whitespace-normal sm:whitespace-nowrap"
           >
             {messages[index]}
           </motion.span>
@@ -84,13 +84,13 @@ export default function Hero() {
       </motion.div>
 
       {/* CONTENT */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 w-full">
+      <div className="relative z-20 w-full max-w-2xl sm:max-w-4xl md:max-w-5xl lg:max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-6 py-28 sm:py-32 md:py-20 lg:py-28 flex flex-col items-start gap-6 sm:gap-8 md:gap-10">
 
         <motion.h1
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
-          className="text-5xl md:text-7xl font-extrabold leading-[1.05] max-w-4xl text-white"
+          className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] max-w-4xl text-white"
         >
           Healing Relationships.
           <span className="block text-white/90">
@@ -102,7 +102,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="mt-8 text-xl text-gray-200 max-w-xl leading-relaxed"
+          className="mt-6 sm:mt-8 text-base sm:text-lg md:text-xl text-gray-200 max-w-xl leading-relaxed"
         >
           Real guidance. Real support. Real transformation—helping individuals,
           couples, and families rebuild trust and rediscover meaningful connection.
@@ -113,18 +113,18 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="mt-10 flex flex-wrap gap-5"
+          className="mt-8 sm:mt-10 flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 md:gap-5"
         >
           <Link
             to="/counselling"
-            className="bg-[#6a1b1b] text-white hover:bg-[#5a1515] px-8 py-3 rounded-md text-sm font-semibold transition shadow-lg"
+            className="bg-[#6a1b1b] text-white hover:bg-[#5a1515] px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 md:py-3 rounded-md text-xs sm:text-sm md:text-sm font-semibold transition shadow-lg text-center"
           >
             Get Counselling
           </Link>
 
           <Link
             to="/support"
-            className="border border-white hover:bg-white text-white hover:text-black px-8 py-3 rounded-md text-sm font-semibold transition"
+            className="border border-white hover:bg-white text-white hover:text-black px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 md:py-3 rounded-md text-xs sm:text-sm md:text-sm font-semibold transition text-center"
           >
             Join Support Program
           </Link>
@@ -135,17 +135,17 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="mt-16 max-w-2xl"
+          className="mt-12 sm:mt-14 md:mt-16 max-w-2xl"
         >
-          <p className="text-white/70 text-lg italic border-l-2 border-[#6a1b1b] pl-6">
-            “Because every relationship deserves clarity, healing, and a second chance.”
+          <p className="text-white/70 text-sm sm:text-base md:text-lg lg:text-lg italic border-l-2 border-[#6a1b1b] pl-4 sm:pl-5 md:pl-6">
+            "Because every relationship deserves clarity, healing, and a second chance."
           </p>
         </motion.div>
 
       </div>
 
       {/* BOTTOM FADE */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/70 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 w-full h-20 sm:h-24 md:h-32 bg-gradient-to-t from-black/70 to-transparent"></div>
 
     </section>
   );

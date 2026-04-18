@@ -53,30 +53,30 @@ export default function Testimonials() {
   }, [testimonials.length]);
 
   return (
-    <section className="relative py-28 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+    <section className="relative py-20 sm:py-24 lg:py-28 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute inset-0 -z-10">
         {/* Soft gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-tr from-[#6a1b1b]/5 via-transparent to-[#6a1b1b]/10 animate-pulse"></div>
 
         {/* Abstract blurred circles */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#6a1b1b]/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#6a1b1b]/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-14 sm:top-20 left-4 sm:left-10 w-52 sm:w-72 h-52 sm:h-72 bg-[#6a1b1b]/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-14 sm:bottom-20 right-4 sm:right-10 w-64 sm:w-96 h-64 sm:h-96 bg-[#6a1b1b]/10 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* SECTION HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto"
+          className="text-center max-w-3xl mx-auto px-4 sm:px-0"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
             Stories of Restored Love & Healing
           </h2>
-          <p className="mt-6 text-gray-600 text-lg leading-relaxed">
+          <p className="mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">
             At <span className="font-semibold text-[#6a1b1b]">Look Up Love</span>, 
             we believe in transforming lives through counseling, emotional wellness, 
             and community support. From marriages to orphanages, from singles to widows, 
@@ -86,7 +86,7 @@ export default function Testimonials() {
         </motion.div>
 
         {/* CAROUSEL */}
-        <div className="mt-16 relative h-64 md:h-72 flex items-center justify-center">
+        <div className="mt-16 relative h-auto md:h-72 flex items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
@@ -94,17 +94,17 @@ export default function Testimonials() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.8 }}
-              className="absolute w-full max-w-3xl bg-gray-50 p-10 rounded-2xl shadow-lg text-center z-10"
+              className="relative w-full max-w-3xl bg-gray-50 p-6 sm:p-8 md:p-10 rounded-3xl shadow-lg text-center z-10"
             >
-              <FaQuoteLeft className="text-[#6a1b1b] text-3xl mb-6 mx-auto" />
-              <p className="text-gray-700 leading-relaxed text-lg italic">
+              <FaQuoteLeft className="text-[#6a1b1b] text-3xl sm:text-4xl mb-6 mx-auto" />
+              <p className="text-gray-700 leading-relaxed text-base sm:text-lg lg:text-xl italic">
                 "{testimonials[index].message}"
               </p>
               <div className="mt-6">
-                <h4 className="font-semibold text-gray-900 text-lg">
+                <h4 className="font-semibold text-gray-900 text-base sm:text-lg">
                   {testimonials[index].name}
                 </h4>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm sm:text-base text-gray-500">
                   {testimonials[index].role}
                 </p>
               </div>
@@ -118,7 +118,7 @@ export default function Testimonials() {
             <button
               key={i}
               onClick={() => setIndex(i)}
-              className={`w-3 h-3 rounded-full transition ${
+              className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition ${
                 i === index ? "bg-[#6a1b1b]" : "bg-gray-300"
               }`}
             />

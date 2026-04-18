@@ -45,43 +45,43 @@ export default function MissionSection() {
   }, []);
 
   return (
-    <section className="relative py-28 bg-white text-gray-900 overflow-hidden">
+    <section className="relative py-20 sm:py-24 lg:py-28 bg-white text-gray-900 overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-tr from-[#6a1b1b]/10 via-transparent to-[#6a1b1b]/20 animate-pulse"></div>
         <div
-          className="absolute top-32 left-10 w-72 h-72 bg-[#6a1b1b]/10 rounded-full blur-3xl"
+          className="absolute top-24 sm:top-32 left-4 sm:left-10 w-52 sm:w-72 h-52 sm:h-72 bg-[#6a1b1b]/10 rounded-full blur-3xl"
           style={{ transform: `translateY(${scrollY * 0.1}px)` }}
         ></div>
         <div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-[#6a1b1b]/10 rounded-full blur-3xl"
+          className="absolute bottom-16 sm:bottom-20 right-4 sm:right-10 w-64 sm:w-96 h-64 sm:h-96 bg-[#6a1b1b]/10 rounded-full blur-3xl"
           style={{ transform: `translateY(${scrollY * -0.1}px)` }}
         ></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* LEFT SIDE IMAGE GALLERY with Parallax */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="grid grid-cols-2 gap-4"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4"
           style={{ transform: `translateY(${scrollY * 0.15}px)` }}
         >
           <img
             src={gallery1}
             alt="Gallery 1"
-            className="rounded-2xl shadow-xl object-cover h-64 w-full hover:scale-105 transition-transform duration-500"
+            className="rounded-2xl shadow-xl object-cover h-48 sm:h-64 w-full hover:scale-105 transition-transform duration-500"
           />
           <img
             src={gallery2}
             alt="Gallery 2"
-            className="rounded-2xl shadow-xl object-cover h-64 w-full hover:scale-105 transition-transform duration-500"
+            className="rounded-2xl shadow-xl object-cover h-48 sm:h-64 w-full hover:scale-105 transition-transform duration-500"
           />
           <img
             src={gallery3}
             alt="Gallery 3"
-            className="rounded-2xl shadow-xl object-cover h-64 w-full col-span-2 hover:scale-105 transition-transform duration-500"
+            className="rounded-2xl shadow-xl object-cover h-64 sm:h-80 w-full sm:col-span-2 hover:scale-105 transition-transform duration-500"
           />
         </motion.div>
 
@@ -94,10 +94,10 @@ export default function MissionSection() {
         >
           {/* Header */}
           <div className="text-left">
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
               Join Our Mission
             </h2>
-            <p className="mt-6 text-gray-700 text-lg leading-relaxed max-w-xl">
+            <p className="mt-6 text-gray-700 text-base sm:text-lg leading-relaxed max-w-xl">
               At <span className="text-[#6a1b1b] font-semibold">Look Up Love</span>, 
               we believe love is more than emotion — it’s a movement. Together, we can heal hearts, 
               restore families, and empower communities across the world.
@@ -105,23 +105,23 @@ export default function MissionSection() {
           </div>
 
           {/* Highlights */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {highlights.map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.15, duration: 0.6 }}
-                className="flex items-start gap-4"
+                className="flex flex-col sm:flex-row items-start gap-4"
               >
-                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#6a1b1b] text-white shadow-lg">
+                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-[#6a1b1b] text-white shadow-lg flex-shrink-0">
                   {item.icon}
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mt-2 leading-relaxed">
+                  <p className="text-gray-600 text-sm sm:text-base mt-2 leading-relaxed">
                     {item.message}
                   </p>
                 </div>
@@ -133,7 +133,7 @@ export default function MissionSection() {
           <div className="pt-6">
             <a
               href="/donate"
-              className="bg-[#6a1b1b] hover:bg-[#571515] text-white px-10 py-5 rounded-xl text-lg font-semibold shadow-xl transition transform hover:scale-105"
+              className="inline-block bg-[#6a1b1b] hover:bg-[#571515] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl text-base sm:text-lg font-semibold shadow-xl transition transform hover:scale-105"
             >
               Join Our Mission
             </a>

@@ -28,19 +28,19 @@ export default function BookSession() {
   };
 
   return (
-    <section className="py-24 bg-black text-white">
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <section className="py-16 sm:py-20 lg:py-24 bg-black text-white">
+      <div className="max-w-7xl mx-auto px-8 sm:px-10 xl:px-12 grid gap-12 lg:grid-cols-2 items-center">
         {/* LEFT CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
             Book a Counseling Session
           </h2>
 
-          <p className="mt-6 text-lg leading-relaxed text-gray-300">
+          <p className="mt-6 text-base sm:text-lg md:text-xl leading-relaxed text-gray-300">
             At Look Up Love, we provide confidential counseling and emotional
             support for individuals and couples. Whether you are navigating
             marriage challenges, recovering from divorce, entering a new
@@ -48,7 +48,7 @@ export default function BookSession() {
             here to guide and support you.
           </p>
 
-          <p className="mt-4 text-gray-400">
+          <p className="mt-4 text-sm sm:text-base text-gray-400">
             Fill out the form and a member of our counseling team will contact
             you shortly to schedule your session.
           </p>
@@ -60,7 +60,7 @@ export default function BookSession() {
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-gray-900 p-8 rounded-xl shadow-lg space-y-5"
+          className="bg-gray-900 p-6 sm:p-8 md:p-10 rounded-3xl shadow-lg space-y-5"
         >
           <div>
             <label className="block text-sm font-medium text-gray-300">
@@ -72,7 +72,7 @@ export default function BookSession() {
               value={formData.name}
               onChange={handleChange}
               placeholder="Enter your name"
-              className="mt-2 w-full border border-gray-700 rounded-md px-4 py-3 bg-black text-white focus:outline-none focus:ring-2 focus:ring-[#6a1b1b]"
+              className="mt-2 w-full border border-gray-700 rounded-xl px-4 py-3 sm:py-4 bg-black text-white focus:outline-none focus:ring-2 focus:ring-[#6a1b1b]"
             />
           </div>
 
@@ -86,7 +86,7 @@ export default function BookSession() {
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter your email"
-              className="mt-2 w-full border border-gray-700 rounded-md px-4 py-3 bg-black text-white focus:outline-none focus:ring-2 focus:ring-[#6a1b1b]"
+              className="mt-2 w-full border border-gray-700 rounded-xl px-4 py-3 sm:py-4 bg-black text-white focus:outline-none focus:ring-2 focus:ring-[#6a1b1b]"
             />
           </div>
 
@@ -98,7 +98,7 @@ export default function BookSession() {
               name="status"
               value={formData.status}
               onChange={handleChange}
-              className="mt-2 w-full border border-gray-700 rounded-md px-4 py-3 bg-black text-white focus:outline-none focus:ring-2 focus:ring-[#6a1b1b]"
+              className="mt-2 w-full border border-gray-700 rounded-xl px-4 py-3 sm:py-4 bg-black text-white focus:outline-none focus:ring-2 focus:ring-[#6a1b1b]"
             >
               <option>Married</option>
               <option>Single</option>
@@ -118,7 +118,7 @@ export default function BookSession() {
               onChange={handleChange}
               rows="4"
               placeholder="Tell us briefly how we can support you"
-              className="mt-2 w-full border border-gray-700 rounded-md px-4 py-3 bg-black text-white focus:outline-none focus:ring-2 focus:ring-[#6a1b1b]"
+              className="mt-2 w-full border border-gray-700 rounded-xl px-4 py-3 sm:py-4 bg-black text-white focus:outline-none focus:ring-2 focus:ring-[#6a1b1b]"
             />
           </div>
 

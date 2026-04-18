@@ -42,28 +42,28 @@ export default function AboutSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-32 bg-white overflow-hidden"
+      className="relative py-20 sm:py-24 lg:py-32 bg-white overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ================= FOUNDER ================= */}
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
           {/* LEFT STORY */}
           <div className="reveal">
 
-            <span className="text-[11px] tracking-[0.4em] uppercase text-[#6a1b1b]/70">
+            <span className="text-[10px] sm:text-[11px] tracking-[0.4em] uppercase text-[#6a1b1b]/70">
               Our Founder
             </span>
 
-            <h2 className="mt-6 text-[40px] sm:text-[50px] font-semibold text-[#6a1b1b] leading-[1.15] tracking-tight">
+            <h2 className="mt-6 text-3xl sm:text-[40px] md:text-[50px] font-semibold text-[#6a1b1b] leading-[1.15] tracking-tight">
               Leading with Compassion,
-              <span className="block font-light mt-3 text-gray-900">
+              <span className="block font-light mt-3 text-gray-900 text-base sm:text-lg">
                 Guided by Purpose
               </span>
             </h2>
 
-            <p className="mt-8 text-lg text-gray-700 leading-relaxed max-w-xl">
+            <p className="mt-8 text-base sm:text-lg text-gray-700 leading-relaxed max-w-xl">
               The inspiration behind Look Up Love began with a deep commitment
               to helping individuals and families navigate the emotional
               challenges that often affect relationships and personal growth.
@@ -72,7 +72,7 @@ export default function AboutSection() {
               their lives.
             </p>
 
-            <p className="mt-4 text-lg text-gray-700 leading-relaxed max-w-xl">
+            <p className="mt-4 text-base sm:text-lg text-gray-700 leading-relaxed max-w-xl">
               With years of experience advocating for emotional wellness and
               relationship development, the founder established Look Up Love as
               a platform dedicated to counselling, mentorship, and community
@@ -81,14 +81,14 @@ export default function AboutSection() {
               promote emotional resilience.
             </p>
 
-            <p className="mt-4 text-lg text-gray-700 leading-relaxed max-w-xl">
+            <p className="mt-4 text-base sm:text-lg text-gray-700 leading-relaxed max-w-xl">
               Today, the foundation continues to support individuals, couples,
               widows, widowers, and families by providing structured programs
               and compassionate guidance that inspire healing, personal
               transformation, and renewed hope.
             </p>
 
-            <p className="mt-10 italic text-gray-800 border-l-2 border-[#6a1b1b] pl-6">
+            <p className="mt-10 italic text-sm sm:text-base text-gray-800 border-l-2 border-[#6a1b1b] pl-4 sm:pl-6">
               “Transformation happens when guidance meets genuine care.”
             </p>
 
@@ -115,12 +115,12 @@ export default function AboutSection() {
               className="relative transition-transform duration-300 ease-out"
             >
 
-              <div className="absolute inset-0 rounded-full bg-[#6a1b1b]/20 blur-3xl scale-110"></div>
+              <div className="absolute inset-0 rounded-full bg-[#6a1b1b]/20 blur-3xl scale-105 sm:scale-110"></div>
 
               <img
                 src={founderImage}
                 alt="Founder"
-                className="relative w-80 h-80 sm:w-96 sm:h-96 object-cover rounded-full border-4 border-white shadow-[0_35px_90px_rgba(0,0,0,0.25)]"
+                className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 object-cover rounded-full border-4 border-white shadow-[0_35px_90px_rgba(0,0,0,0.25)]"
               />
 
             </div>
@@ -130,25 +130,25 @@ export default function AboutSection() {
         </div>
 
         {/* ================= DIVIDER ================= */}
-        <div className="reveal my-28 flex justify-center">
-          <div className="w-2/3 h-[1px] bg-gradient-to-r from-transparent via-[#6a1b1b] to-transparent"></div>
+        <div className="reveal my-20 sm:my-28 flex justify-center">
+          <div className="w-full sm:w-2/3 h-[1px] bg-gradient-to-r from-transparent via-[#6a1b1b] to-transparent"></div>
         </div>
 
         {/* ================= NGO PROFILE ================= */}
-        <div className="grid md:grid-cols-2 gap-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14">
 
           {/* NGO PROFILE */}
-          <div className="reveal bg-white rounded-2xl p-12 shadow-[0_25px_70px_rgba(0,0,0,0.08)] border border-gray-100">
+          <div className="reveal bg-white rounded-2xl p-8 sm:p-10 lg:p-12 shadow-[0_25px_70px_rgba(0,0,0,0.08)] border border-gray-100">
 
-            <span className="text-[11px] tracking-[0.35em] uppercase text-[#6a1b1b]/70">
+            <span className="text-[10px] sm:text-[11px] tracking-[0.35em] uppercase text-[#6a1b1b]/70">
               NGO Profile
             </span>
 
-            <h3 className="mt-4 text-2xl font-semibold text-gray-900">
+            <h3 className="mt-4 text-xl sm:text-2xl font-semibold text-gray-900">
               Supporting Emotional Wellness and Relationships
             </h3>
 
-            <p className="mt-6 text-gray-600 leading-relaxed">
+            <p className="mt-6 text-base sm:text-lg text-gray-600 leading-relaxed">
               Look Up Love is a non-profit organization dedicated to promoting
               emotional well-being and strengthening relationships within
               families and communities. The foundation provides counselling,
@@ -166,13 +166,13 @@ export default function AboutSection() {
           </div>
 
           {/* COMMUNITY IMPACT */}
-          <div className="reveal bg-white rounded-2xl p-12 shadow-[0_25px_70px_rgba(0,0,0,0.08)] border border-gray-100">
+<div className="reveal bg-white rounded-2xl p-8 sm:p-10 lg:p-12 shadow-[0_25px_70px_rgba(0,0,0,0.08)] border border-gray-100">
 
-            <span className="text-[11px] tracking-[0.35em] uppercase text-[#6a1b1b]/70">
+            <span className="text-[10px] sm:text-[11px] tracking-[0.35em] uppercase text-[#6a1b1b]/70">
               Our Commitment
             </span>
 
-            <h3 className="mt-4 text-2xl font-semibold text-gray-900">
+            <h3 className="mt-4 text-xl sm:text-2xl font-semibold text-gray-900">
               Building Stronger Communities
             </h3>
 

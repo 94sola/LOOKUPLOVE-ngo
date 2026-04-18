@@ -61,39 +61,39 @@ export default function GallerySection() {
   };
 
   return (
-    <section className="relative py-28 bg-black text-white overflow-hidden">
+    <section className="relative py-20 sm:py-24 lg:py-28 bg-black text-white overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-tr from-[#6a1b1b]/20 via-transparent to-[#6a1b1b]/30 animate-pulse"></div>
         <div
-          className="absolute top-32 left-10 w-72 h-72 bg-[#6a1b1b]/20 rounded-full blur-3xl"
+          className="absolute top-24 sm:top-28 left-4 sm:left-10 w-52 sm:w-72 h-52 sm:h-72 bg-[#6a1b1b]/20 rounded-full blur-3xl"
           style={{ transform: `translateY(${scrollY * 0.1}px)` }}
         ></div>
         <div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-[#6a1b1b]/20 rounded-full blur-3xl"
+          className="absolute bottom-16 sm:bottom-20 right-4 sm:right-10 w-64 sm:w-96 h-64 sm:h-96 bg-[#6a1b1b]/20 rounded-full blur-3xl"
           style={{ transform: `translateY(${scrollY * -0.1}px)` }}
         ></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* SECTION HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto"
+          className="text-center max-w-3xl mx-auto px-4 sm:px-0"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight">
             Our Premium Gallery
           </h2>
-          <p className="mt-6 text-gray-300 text-lg leading-relaxed">
+          <p className="mt-6 text-gray-300 text-base sm:text-lg leading-relaxed">
             Explore moments of love, healing, and community impact captured through 
-            the journey of <span className="bg-[#6a1b1b] text-white p-2 font-semibold">Look Up Love</span>.
+            the journey of <span className="bg-[#6a1b1b] text-white px-2 py-1 rounded-md font-semibold">Look Up Love</span>.
           </p>
         </motion.div>
 
         {/* CAROUSEL */}
-        <div className="mt-20 relative h-[460px] flex items-center justify-center">
+        <div className="mt-16 sm:mt-20 relative h-auto md:h-[460px] flex items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
@@ -101,31 +101,33 @@ export default function GallerySection() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.8 }}
-              className="absolute w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden border border-[#6a1b1b]/40 cursor-pointer"
+              className="relative w-full max-w-4xl rounded-3xl shadow-2xl overflow-hidden border border-[#6a1b1b]/40 cursor-pointer"
               onClick={() => setLightboxOpen(!lightboxOpen)}
             >
               <img
                 src={galleryItems[index].image}
                 alt={galleryItems[index].caption}
-                className="w-full h-[350px] object-cover"
+                className="w-full h-64 sm:h-[320px] md:h-[350px] object-cover"
               />
-              <div className="bg-black/70 text-white p-6 text-center">
-                <p className="text-lg italic">{galleryItems[index].caption}</p>
+              <div className="bg-black/70 text-white p-5 sm:p-6 text-center">
+                <p className="text-base sm:text-lg md:text-xl italic">
+                  {galleryItems[index].caption}
+                </p>
               </div>
             </motion.div>
           </AnimatePresence>
 
           <button
             onClick={prevSlide}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-[#6a1b1b] text-white p-3 rounded-full transition"
+            className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-[#6a1b1b] text-white p-3 sm:p-4 rounded-full transition"
           >
-            <FaChevronLeft size={20} />
+            <FaChevronLeft size={18} />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-[#6a1b1b] text-white p-3 rounded-full transition"
+            className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-[#6a1b1b] text-white p-3 sm:p-4 rounded-full transition"
           >
-            <FaChevronRight size={20} />
+            <FaChevronRight size={18} />
           </button>
         </div>
 
@@ -135,7 +137,7 @@ export default function GallerySection() {
             <button
               key={i}
               onClick={() => setIndex(i)}
-              className={`w-3 h-3 rounded-full transition ${
+              className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition ${
                 i === index ? "bg-[#6a1b1b]" : "bg-gray-500"
               }`}
             />
@@ -146,16 +148,16 @@ export default function GallerySection() {
       {/* Lightbox */}
       {lightboxOpen && (
         <div
-          className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 cursor-pointer"
+          className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 cursor-pointer px-4 sm:px-6"
           onClick={() => setLightboxOpen(false)}
         >
-          <div className="relative max-w-5xl w-full px-6">
+          <div className="relative max-w-5xl w-full">
             <img
               src={galleryItems[index].image}
               alt={galleryItems[index].caption}
-              className="w-full max-h-[90vh] object-contain rounded-lg shadow-2xl mx-auto"
+              className="w-full max-h-[85vh] sm:max-h-[90vh] object-contain rounded-3xl shadow-2xl mx-auto"
             />
-            <p className="mt-4 text-center text-gray-300 italic">
+            <p className="mt-4 text-center text-gray-300 italic text-sm sm:text-base">
               {galleryItems[index].caption}
             </p>
           </div>

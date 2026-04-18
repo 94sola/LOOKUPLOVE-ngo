@@ -100,7 +100,7 @@ export default function Navbar() {
   return (
     <>
       {/* HEADER */}
-      <header className={`fixed w-full z-[1000] transition-transform duration-300 ${open ? "translate-y-0" : hidden ? "-translate-y-full" : "translate-y-0"}`}>
+      <header className={`fixed top-0 left-0 w-full z-[1000] transition-transform duration-300 ${open ? "translate-y-0" : hidden ? "-translate-y-full" : "translate-y-0"}`}>
         {/* TOP BAR */}
         <div className="hidden md:block bg-[#6a1b1b] text-white text-sm overflow-hidden">
           <div className="whitespace-nowrap animate-marquee px-6 py-2 flex gap-10">
@@ -175,7 +175,7 @@ export default function Navbar() {
       </header>
 
       {/* MOBILE MENU */}
-      <div className={`fixed top-0 left-0 w-full bg-white z-[1200] transition-transform duration-300 ${open ? "translate-y-0" : "-translate-y-full"}`}>
+      <div className={`fixed top-0 left-0 w-full min-h-screen overflow-x-hidden bg-white z-[1200] transition-transform duration-300 ${open ? "translate-y-0" : "-translate-y-full"}`}>
         <div className="flex justify-end p-4 border-b">
           <IoMdClose size={26} onClick={handleNavigate}/>
         </div>
@@ -195,16 +195,16 @@ export default function Navbar() {
               {mobileDropdown && (
                 <motion.div initial={{height:0,opacity:0}} animate={{height:"auto",opacity:1}} exit={{height:0,opacity:0}} className="overflow-hidden mt-4 flex flex-col">
                   {/* LEVEL 1 BUTTONS */}
-                  <div className="flex gap-4 border-b pb-2 relative">
+                  <div className="flex gap-4 border-b pb-2 relative min-w-0">
                     <button 
                       onClick={()=>{setMobileLevelOne("counselling"); handleMobileUnderline("counselling")}} 
-                      className="flex-1 flex justify-between items-center font-semibold text-left"
+                      className="flex-1 min-w-0 flex justify-between items-center font-semibold text-left"
                     >
                       Counselling <FiChevronDown className={`transition-transform ${mobileLevelOne==="counselling"?"rotate-180":""}`}/>
                     </button>
                     <button 
                       onClick={()=>{setMobileLevelOne("support"); handleMobileUnderline("support")}} 
-                      className="flex-1 flex justify-between items-center font-semibold text-left"
+                      className="flex-1 min-w-0 flex justify-between items-center font-semibold text-left"
                     >
                       Support <FiChevronDown className={`transition-transform ${mobileLevelOne==="support"?"rotate-180":""}`}/>
                     </button>

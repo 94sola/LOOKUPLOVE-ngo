@@ -3,7 +3,7 @@ import React from "react";
 
 const ContactSection = () => {
   return (
-    <div className="w-full max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-white shadow-xl rounded-3xl grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12">
+    <div className="w-full max-w-6xl mx-auto  py-16 sm:py-20 md:py-24 lg:py-28 px-4 sm:px-6 lg:px-8 bg-white shadow-xl rounded-3xl grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12">
       
       {/* Left Side - Contact Info */}
       <div className="flex flex-col justify-center">

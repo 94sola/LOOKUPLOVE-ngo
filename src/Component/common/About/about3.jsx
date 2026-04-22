@@ -58,9 +58,7 @@ export default function MissionSection() {
               Mission
             </h3>
             <p className="mt-4 text-base sm:text-lg text-gray-600 leading-relaxed">
-              Look Up Love was founded with a clear mission — to restore emotional
-              well-being and strengthen relationships through intentional guidance,
-              counselling, and compassionate support.
+              LOOKUPLOVE is committed to strengthening marriages and families by providing counselling, guidance, and support to newly wedded couples, especially those preparing to emigrate or living in the diaspora. We strive to promote stability, wellbeing, and resilience in relationships facing social and economic challenges. Through compassionate care, practical resources, and community engagement, LOOKUPLOVE empowers couples to build enduring bonds, navigate cultural transitions, and thrive together in diverse environments.
             </p>
           </div>
 
@@ -70,9 +68,7 @@ export default function MissionSection() {
               Vision
             </h3>
             <p className="mt-4 text-base sm:text-lg text-gray-600 leading-relaxed">
-              Through mentorship and community outreach programs, the foundation
-              helps individuals and families rebuild trust, rediscover purpose,
-              and cultivate meaningful relationships that endure.
+              LOOKUPLOVE envisions a world where agencies, partners, and communities work together to alleviate poverty and uplift distressed families. By fostering collaboration with stakeholders and driving impactful programs, LOOKUPLOVE seeks to create sustainable change, improve welfare, and build resilient communities where love, stability, and opportunity flourish.
             </p>
           </div>
 
@@ -92,8 +88,7 @@ export default function MissionSection() {
               Our Aim
             </h3>
             <p className="mt-6 text-base sm:text-lg text-gray-600 leading-relaxed">
-              To create safe environments where individuals rediscover purpose,
-              rebuild trust, and develop emotional strength for healthy relationships.
+              We aims to support singles, especially those in the diaspora, who are at critical decision points or crossroads in their personal and family lives. By offering guidance, counselling, and community support, the organization helps individuals navigate challenges, make informed choices, and build strong foundations for future relationships and family wellbeing.
             </p>
           </div>
 

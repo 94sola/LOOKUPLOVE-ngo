@@ -69,7 +69,6 @@ export default function AboutHero() {
       {/* FLOATING BADGE */}
       <div className="absolute top-20 sm:top-28 left-1/2 -translate-x-1/2 z-20 reveal px-4 sm:px-0">
         <div className="px-4 sm:px-6 py-2.5 sm:py-3 rounded-full backdrop-blur-md bg-white/10 border border-white/30 text-white text-xs sm:text-sm tracking-wide shadow-lg max-w-[90vw] text-center break-words">
-          Guiding Healing & Healthy Relationships
         </div>
       </div>
 

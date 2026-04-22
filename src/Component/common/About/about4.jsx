@@ -45,7 +45,7 @@ export default function CoreValuesSection() {
     },
     {
       title: "Commitment",
-      text: "Our dedication to emotional wellness and healthy relationships drives every program, outreach, and initiative we undertake.",
+      text: "To offer counselling and intervention services to victims of troubled marriages and families experiencing conflict or breakdown..",
     },
   ];
 

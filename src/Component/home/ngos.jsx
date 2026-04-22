@@ -44,9 +44,7 @@ export default function About() {
               Our Vision
             </h3>
             <p className="text-base sm:text-lg text-gray-600 mb-6 leading-relaxed">
-              To be a beacon of hope and transformation, inspiring love that
-              transcends challenges and builds stronger families and communities
-              across the world.
+              To promote the stability and wellbeing of disadvantaged marriages and families facing social and economic challenges.
             </p>
 
             <div className="border-t pt-6">

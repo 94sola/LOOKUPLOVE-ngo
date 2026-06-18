@@ -61,7 +61,7 @@ export default function Navbar() {
       { name: "Marriage in Diaspora", items: ["Long Distance", "Immigration Stress", "Cultural Adjustment"] },
       { name: "Parenting", items: ["New Parents", "Teen Guidance", "Family Counseling"] },
     ],
-    support: ["Orphanage Home", "Divorced Individuals", "Widows & Widowers"],
+    support: ["Divorced Individuals", "Widows & Widowers"],
   };
 
   // Desktop underline
@@ -152,7 +152,7 @@ export default function Navbar() {
                 </AnimatePresence>
               </div>
 
-              <NavLink to="/gallery" onMouseEnter={handleMouseEnter}>Gallery</NavLink>
+              
               <NavLink to="/contact" onMouseEnter={handleMouseEnter}>Contact</NavLink>
 
               <span ref={underlineRef} className="absolute bottom-0 left-0 h-[2px] bg-[#6a1b1b] transition-all duration-300"/>
@@ -166,7 +166,6 @@ export default function Navbar() {
                 <FaTwitter className="hover:text-[#6a1b1b]"/>
               </div>
               <a href={bookLink} target="_blank" rel="noopener noreferrer" className="text-sm px-4 py-2 rounded-md border hover:bg-gray-100">Book Session</a>
-              <Link to="/donate" className="bg-[#6a1b1b] text-white px-5 py-2 rounded-md">Donate</Link>
             </div>
 
             <button onClick={()=>setOpen(true)} className="md:hidden"><HiOutlineMenuAlt3 size={26}/></button>
@@ -252,12 +251,11 @@ export default function Navbar() {
             </AnimatePresence>
           </div>
 
-          <Link to="/gallery" onClick={handleNavigate}>Gallery</Link>
+          
           <Link to="/contact" onClick={handleNavigate}>Contact</Link>
 
           <div className="pt-6 flex flex-col gap-3">
             <a href={bookLink} target="_blank" rel="noopener noreferrer" className="text-center border py-2.5 rounded-md">Book Session</a>
-            <Link to="/donate" className="text-center bg-[#6a1b1b] text-white py-2.5 rounded-md">Donate</Link>
           </div>
 
           <div className="flex gap-5 pt-6 text-gray-700">

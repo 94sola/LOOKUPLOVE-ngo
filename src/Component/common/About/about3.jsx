@@ -25,7 +25,7 @@ export default function MissionSection() {
 
   const goals = [
     "Deliver accessible and professional counselling services",
-    "Support widows, widowers, and orphanage homes",
+    "Support widows and widowers",
     "Promote emotional well-being within communities",
     "Provide relationship education and mentorship",
     "Expand outreach programs with lasting impact",

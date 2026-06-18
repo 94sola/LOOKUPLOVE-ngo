@@ -109,7 +109,7 @@ export const FAQ_DATA = [
     }
   },
 
-  // 🤝 VOLUNTEER & DONATION
+  // 🤝 VOLUNTEER
   {
     id: "volunteer",
     category: "volunteer",
@@ -125,24 +125,6 @@ export const FAQ_DATA = [
     yo: {
       q: "Ṣé mo lè jẹ́ olùyọ̀ọ́da?",
       a: "Bẹ́ẹ̀ ni."
-    }
-  },
-
-  {
-    id: "donate",
-    category: "donor",
-    tags: ["donate", "support", "fund"],
-    en: {
-      q: "How can I donate?",
-      a: "You can support our programs through donations or partnerships."
-    },
-    fr: {
-      q: "Comment faire un don ?",
-      a: "Vous pouvez soutenir nos programmes."
-    },
-    yo: {
-      q: "Báwo ni mo ṣe lè ṣe ẹ̀bùn?",
-      a: "O lè ṣe ẹ̀bùn."
     }
   },
 

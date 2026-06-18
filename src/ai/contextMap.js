@@ -1,14 +1,11 @@
 export const pageContexts = {
   home: {
-    focus: ["mission", "donate", "impact"]
+    focus: ["mission", "impact"]
   },
   about: {
-    focus: ["history", "team", "mission"]
+    focus: ["history", "mission"]
   },
   contact: {
-    focus: ["contact", "help", "donate"]
-  },
-  gallery: {
-    focus: ["projects", "events", "impact"]
+    focus: ["contact", "help"]
   }
 };

@@ -7,7 +7,7 @@ export default function WhoWeHelp() {
       { name: "Marriage in Diaspora", items: ["Long Distance", "Immigration Stress", "Cultural Adjustment"] },
       { name: "Parenting", items: ["New Parents", "Teen Guidance", "Family Counseling"] },
     ],
-    support: ["Orphanage Home", "Divorced Individuals", "Widows & Widowers"],
+    support: ["Divorced Individuals", "Widows & Widowers"],
   };
 
   
@@ -75,7 +75,6 @@ export default function WhoWeHelp() {
                 className="bg-white rounded-3xl shadow-xl p-6 sm:p-8 md:p-10 flex flex-col items-center text-center border border-yellow-400/30"
               >
                 <div className="w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center rounded-xl bg-gradient-to-r from-[#6a1b1b] to-[#631818] text-white mb-6 shadow-lg border-2 border-yellow-400">
-                  {supportItem === "Orphanage Home" && <FaHome size={28} />}
                   {supportItem === "Divorced Individuals" && <FaHandsHelping size={28} />}
                   {supportItem === "Widows & Widowers" && <FaRegSmileBeam size={28} />}
                 </div>

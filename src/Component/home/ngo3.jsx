@@ -23,12 +23,6 @@ export default function Testimonials() {
         "The relationship coaching program helped me understand healthy boundaries and self-worth. I now approach relationships with confidence and clarity."
     },
     {
-      name: "Hope Foundation",
-      role: "Orphanage Partner",
-      message:
-        "Look Up Love has been a pillar of support for our orphanage, providing mentorship, counseling, and resources that bring hope and stability to children in need."
-    },
-    {
       name: "Mrs. Adeola",
       role: "Widow",
       message:
@@ -79,7 +73,7 @@ export default function Testimonials() {
           <p className="mt-6 text-gray-600 text-base sm:text-lg leading-relaxed">
             At <span className="font-semibold text-[#6a1b1b]">Look Up Love</span>, 
             we believe in transforming lives through counseling, emotional wellness, 
-            and community support. From marriages to orphanages, from singles to widows, 
+            and community support. From marriages to singles to widows, 
             and even engaged couples preparing for marriage, our mission is to heal hearts, 
             restore hope, and build stronger families.
           </p>

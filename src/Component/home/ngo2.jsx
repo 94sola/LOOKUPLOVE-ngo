@@ -28,13 +28,7 @@ export default function Programs() {
         "Helping singles and new couples build confidence, emotional intelligence, and strong relationship foundations."
     },
     {
-      icon: <FaHome size={28} />,
-      title: "Orphanage Support",
-      description:
-        "Offering care, mentorship, and resources to orphaned children, helping them grow in love, stability, and hope."
-    },
-    {
-      icon: <FaRegSmile size={28} />,
+      icon: <FaRegSmile size={28} />,  
       title: "Widow & Widower Care",
       description:
         "Providing emotional support, counseling, and community programs to empower widows and widowers in their healing journey."

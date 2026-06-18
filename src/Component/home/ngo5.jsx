@@ -2,11 +2,6 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { FaHandsHelping, FaGlobe, FaUsers, FaHeart } from "react-icons/fa";
 
-// ✅ Import gallery images from your assets
-import gallery1 from "../../assets/images/gallery1.jpg";
-import gallery2 from "../../assets/images/gallery2.jpg";
-import gallery3 from "../../assets/images/gallery3.jpg";
-
 export default function MissionSection() {
   const highlights = [
     {
@@ -25,7 +20,7 @@ export default function MissionSection() {
       icon: <FaHandsHelping size={28} />,
       title: "Compassion in Action",
       message:
-        "We support orphanages, widows, and vulnerable groups with care, guidance, and resources for a brighter future."
+        "We support widows and vulnerable groups with care, guidance, and resources for a brighter future."
     },
     {
       icon: <FaHeart size={28} />,
@@ -59,32 +54,7 @@ export default function MissionSection() {
         ></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        {/* LEFT SIDE IMAGE GALLERY with Parallax */}
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="grid grid-cols-1 sm:grid-cols-2 gap-4"
-          style={{ transform: `translateY(${scrollY * 0.15}px)` }}
-        >
-          <img
-            src={gallery1}
-            alt="Gallery 1"
-            className="rounded-2xl shadow-xl object-cover h-48 sm:h-64 w-full hover:scale-105 transition-transform duration-500"
-          />
-          <img
-            src={gallery2}
-            alt="Gallery 2"
-            className="rounded-2xl shadow-xl object-cover h-48 sm:h-64 w-full hover:scale-105 transition-transform duration-500"
-          />
-          <img
-            src={gallery3}
-            alt="Gallery 3"
-            className="rounded-2xl shadow-xl object-cover h-64 sm:h-80 w-full sm:col-span-2 hover:scale-105 transition-transform duration-500"
-          />
-        </motion.div>
-
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 grid grid-cols-1 gap-12 lg:gap-16 items-center">
         {/* RIGHT SIDE CONTENT */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
@@ -132,7 +102,7 @@ export default function MissionSection() {
           {/* CTA Button */}
           <div className="pt-6">
             <a
-              href="/donate"
+              href="/contact"
               className="inline-block bg-[#6a1b1b] hover:bg-[#571515] text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl text-base sm:text-lg font-semibold shadow-xl transition transform hover:scale-105"
             >
               Join Our Mission

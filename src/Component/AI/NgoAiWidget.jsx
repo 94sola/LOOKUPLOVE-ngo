@@ -37,9 +37,6 @@ export default function NgoAIFloatingWidget() {
       q.includes("therapy") ||
       q.includes("relationship");
 
-    const isDonateIntent =
-      q.includes("donate") || q.includes("support") || q.includes("fund");
-
     const isVolunteerIntent =
       q.includes("volunteer") || q.includes("join") || q.includes("help");
 
@@ -62,11 +59,7 @@ export default function NgoAIFloatingWidget() {
       if (section) section.scrollIntoView({ behavior: "smooth" });
     }
 
-    // 💰 DONATION ACTION
-    if (isDonateIntent) {
-      const section = document.getElementById("donation-section");
-      if (section) section.scrollIntoView({ behavior: "smooth" });
-    }
+    // other smart actions
 
     // 🤝 VOLUNTEER ACTION
     if (isVolunteerIntent) {
@@ -87,7 +80,7 @@ export default function NgoAIFloatingWidget() {
     const reply =
       results.length > 0
         ? results[0][detected].a
-        : "I couldn’t find an exact answer. Please contact our team for assistance.";
+        : "I couldn’t find an exact answer. Please contact us for assistance.";
 
     const aiMsg = { type: "ai", text: reply };
 

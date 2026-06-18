@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import aboutHero from "../../../assets/images/gallery3.jpg";
+import aboutHero from "../../../assets/images/gallery1.jpg";
 
 export default function AboutHero() {
   const sectionRef = useRef(null);

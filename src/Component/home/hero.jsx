@@ -10,7 +10,6 @@ export default function Hero() {
     "Healing Hearts & Restoring Love",
     "Guiding Couples Toward Peace",
     "Empowering Singles Emotionally",
-    "LookUpLove Supports Orphanage Homes ❤️",
     "Healing and Support for Widows & Widowers ❤️",
   ];
 
@@ -120,13 +119,6 @@ export default function Hero() {
             className="bg-[#6a1b1b] text-white hover:bg-[#5a1515] px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 md:py-3 rounded-md text-xs sm:text-sm md:text-sm font-semibold transition shadow-lg text-center"
           >
             Get Counselling
-          </Link>
-
-          <Link
-            to="/support"
-            className="border border-white hover:bg-white text-white hover:text-black px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 md:py-3 rounded-md text-xs sm:text-sm md:text-sm font-semibold transition text-center"
-          >
-            Join Support Program
           </Link>
         </motion.div>
 

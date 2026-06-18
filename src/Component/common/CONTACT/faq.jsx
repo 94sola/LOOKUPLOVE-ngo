@@ -19,7 +19,7 @@ import {
 const FAQ_DATA = [
   {
     icon: HandHeart,
-    category: "donor",
+    category: "general",
     key: "mission",
     en: {
       q: "What is the core mission of your organization?",
@@ -32,23 +32,6 @@ const FAQ_DATA = [
     yo: {
       q: "Kí ni iṣẹ́ àfojúsùn àjọ yín?",
       a: "A ń fún àwọn àgbègbè aláìní lókun nípasẹ̀ ẹ̀kọ́, ìlera àti àwọn eto ìdàgbàsókè tó péye."
-    }
-  },
-  {
-    icon: Landmark,
-    category: "donor",
-    key: "funding",
-    en: {
-      q: "How are your projects funded?",
-      a: "We rely on donations, grants, CSR partnerships, and institutional support."
-    },
-    fr: {
-      q: "Comment vos projets sont-ils financés ?",
-      a: "Nos projets sont financés par des dons, subventions et partenariats institutionnels."
-    },
-    yo: {
-      q: "Báwo ni ẹ ṣe ń rí owó fún àwọn iṣẹ́ yín?",
-      a: "A ń rí ìdáwọ́lé owó látinú ẹ̀bùn, ìrànlọ́wọ́ àti àjọṣepọ̀ ilé-iṣẹ́."
     }
   },
   {
@@ -66,23 +49,6 @@ const FAQ_DATA = [
     yo: {
       q: "Ṣé mo lè ṣe iṣẹ́ olùyọ̀ọ́da látọ́na jíjìn tàbí orílẹ̀-èdè míì?",
       a: "Bẹ́ẹ̀ ni, a ní iṣẹ́ olùyọ̀ọ́da látọ́na àti ní ojúlé."
-    }
-  },
-  {
-    icon: ShieldCheck,
-    category: "donor",
-    key: "transparency",
-    en: {
-      q: "Are donations transparent and accountable?",
-      a: "Yes, we publish regular financial and impact reports."
-    },
-    fr: {
-      q: "Les dons sont-ils transparents ?",
-      a: "Oui, nous publions des rapports financiers et d’impact réguliers."
-    },
-    yo: {
-      q: "Ṣé ẹ̀bùn jẹ́ ohun tí a lè fọkàn tán?",
-      a: "Bẹ́ẹ̀ ni, a máa ń ṣàfihàn ìròyìn ináwó àti ipa iṣẹ́ wa."
     }
   },
   {
@@ -104,7 +70,7 @@ const FAQ_DATA = [
   },
   {
     icon: Bell,
-    category: "donor",
+    category: "general",
     key: "updates",
     en: {
       q: "How can I stay updated?",
@@ -141,7 +107,7 @@ const FAQ_DATA = [
   },
   {
     icon: Eye,
-    category: "donor",
+    category: "general",
     key: "monitoring",
     en: {
       q: "How do you measure project success?",
@@ -174,36 +140,19 @@ const FAQ_DATA = [
     }
   },
   {
-    icon: HandHeart,
-    category: "donor",
-    key: "taxbenefits",
-    en: {
-      q: "Are donations tax-deductible?",
-      a: "Yes, all donations are eligible for tax deductions under Nigerian law."
-    },
-    fr: {
-      q: "Les dons sont-ils déductibles des impôts ?",
-      a: "Oui, tous les dons sont déductibles selon la loi nigériane."
-    },
-    yo: {
-      q: "Ṣé ẹ̀bùn lè jẹ́ kí owó-ori dínkù?",
-      a: "Bẹ́ẹ̀ ni, gbogbo ẹ̀bùn jẹ́ ohun tí a lè dín owó-ori kù nípa òfin Naijiria."
-    }
-  },
-  {
     icon: ShieldCheck,
     category: "partner",
     key: "data",
     en: {
-      q: "How do you protect donor and volunteer data?",
+      q: "How do you protect personal and volunteer data?",
       a: "We follow strict data protection policies and use secure systems to safeguard information."
     },
     fr: {
-      q: "Comment protégez-vous les données des donateurs et bénévoles ?",
+      q: "Comment protégez-vous les données personnelles et des bénévoles ?",
       a: "Nous suivons des politiques strictes de protection des données et utilisons des systèmes sécurisés."
     },
     yo: {
-      q: "Báwo ni ẹ ṣe ń dáàbò bo àwọn àlàyé àwọn olùdásílẹ̀ àti olùyọ̀ọ́da?",
+      q: "Báwo ni ẹ ṣe ń dáàbò bo àlàyé ara ẹni àti àwọn olùyọ̀ọ́da?",
       a: "A ń tẹ̀lé ìlànà ààbò àlàyé tó muna àti lílo àwọn eto tó dájú."
     }
   }
@@ -283,7 +232,7 @@ export default function FAQSection() {
 
           {/* Filter */}
           <div className="flex flex-wrap justify-center gap-2">
-            {["all", "donor", "volunteer", "partner"].map((f) => (
+            {["all", "volunteer", "partner"].map((f) => (
               <button
                 key={f}
                 onClick={() => setFilter(f)}

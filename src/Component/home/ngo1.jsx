@@ -44,13 +44,12 @@ export default function BookSession() {
             At Look Up Love, we provide confidential counseling and emotional
             support for individuals and couples. Whether you are navigating
             marriage challenges, recovering from divorce, entering a new
-            relationship, or preparing for a healthy partnership, our team is
+            relationship, or preparing for a healthy partnership, we are
             here to guide and support you.
           </p>
 
           <p className="mt-4 text-sm sm:text-base text-gray-400">
-            Fill out the form and a member of our counseling team will contact
-            you shortly to schedule your session.
+            Fill out the form and a counselor will contact you shortly to schedule your session.
           </p>
         </motion.div>
 

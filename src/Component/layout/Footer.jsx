@@ -162,10 +162,10 @@ const Footer = () => {
 
             {/* CTA */}
             <Link
-              to="/donate"
+              to="/contact"
               className="inline-block bg-[#6a1b1b] hover:bg-[#631919] text-white text-[15px] px-6 py-3 rounded-md transition"
             >
-              Support Our Mission
+              Contact Us
             </Link>
 
           </div>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { FaHeart } from "react-icons/fa";
-import heroImage from "../../assets/images/herosection.jpg";
+import heroImage from "../../assets/images/gallery2.jpg";
 
 export default function Hero() {
   const messages = [
